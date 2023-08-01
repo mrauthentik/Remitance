@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="Horemow.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remital</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+          <link rel="stylesheet" href="./style1.css">
+          <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+</head>
+<body>
+    <div class="head  bg-cover  text-center">
+        <img src="./Horemow.png" alt="horemow Logo" srcset="" class="w-2/4 h-2/4 relative ml-28 sm:ml-0 sm:w-20 sm:h-20">
+        <h1 class="text-white font-bold text-4xl">Horemow Monthly Calculator</h1>
+        <p class="text-white">Change your percentage formular at the top right of the page</p>
+        <div class="select rounded bg-blue sm:mr-0">
+            <select name="" id="select" class="rounded bg-green 500 mb-1">
+                 <option value="Chapter">Chapter</option>
+                 <option value="Zone">Zone</option>
+                <option value="State">State</option>
+               
+            </select>
+        </div>
+    </div>
+    <div class="container">
+            <div class="section flex flex-wrap gap-2 mr-2 mt-10 sm:justify-center text-left relative">
+                <div class="box rounded-full md:rounded-full bx w-1/6 sm:w-16">
+                    <span class="material-icons md-36">lightbulb</span>
+                </div> <p class="text-xs sm:text-lg mt-4 "> How it works</p>
+                <!-- <p class="mt-16 right-15">How it works</p> -->
+                <div class="box1  rounded-full bx w-1/6 sm:w-16">
+                    <span class="material-icons md-24"> edit</span>
+                </div> 
+                <p class="text-xs sm:text-lg mt-4">Tithe and offering</p>
+                <!-- <p class='mt-16 right-15'>Enter total tithe
+                    and offering for
+                    the month</p> -->
+                <div class="box2 rounded-full bx w-1/6 sm:w-16">
+                    <span class="material-icons md-24">send</span>
+                </div> <p class="text-xs sm:text-lg mt-4"> Click submit</p>
+                <!-- <p class="mt-16 right-14">Click Submit</p> -->
+                <div class="box3 rounded-full bx w-1/6 sm:w-16">
+                    <span class="material-icons md-24">check</span>
+                </div>
+                <p class="text-xs sm:text-lg mt-4">You are good to go</p>
+                <!-- <p class="mt-16 left-15">You are good to go</p> -->
+            </div>
+<!-- 
+            <div class="mid-text flex flex-wrap gap-2 sm:justify-between sm:text-200">
+                <p></p>
+                <p class=" sm:mr-8xl sm:text-lg text-xs">How it works</p>
+                <p class="sm:text-lg text-xs"> Enter Total Tithe and Offering</p>
+                <p class="sm:text-lg text-xs">Click Submit</p>
+                <p class="sm:text-lg text-xs">You are good to Go!!!</p>
+            </div> -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"  class="relative z-10"><path fill="#16412F" fill-opacity="1" d="M0,160L480,128L960,96L1440,192L1440,320L960,320L480,320L0,320Z"></path></svg> -->
+        
+        
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#16412F" fill-opacity="1" d="M0,224L40,218.7C80,213,160,203,240,176C320,149,400,107,480,101.3C560,96,640,128,720,133.3C800,139,880,117,960,122.7C1040,128,1120,160,1200,154.7C1280,149,1360,107,1400,85.3L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        <div class="input_field ml-5 mt-3">
+    <form action="#" >
+            <input type="number" placeholder="Tithe" required id="inputTithe" class="mb-5 sm:mt-10 rounded-2xl bg-gray-200">
+            <input type="number" placeholder="offering" required id="inputOffering" class="mb-5 md:mb-0 rounded-2xl bg-gray-200">
+            <input type="number" placeholder="Expenditures" id="expense" class="rounded-2xl bg-gray-200">
+            <button class="rounded-full bg-green-950 p-2 mx-4 w-9xl sm:w-1/4 text-white" id="submit" type="submit" >Submit </button>
+             <div type="text" id="totalIncome" class=" text-black-100 bg-green-200 w-40 sm:mt-9xl mt-7 mr-7-11 rounded-lg text-center">
+                Total Income
+            </div>
+    </form>
+        </div>
+        <h2 class="font-extrabold text-center text-green-800 font-serif text-xl">Percentage Sharing</h2>
+            <div class="sharing sm:flex  justify-between bg-green 950 w-8xl ml-2 mr-5 sm:flex-wrap flex flex-wrap gap-2 ">
+                <div class="headqrts rounded-2xl sm:w-1/4  w-1/4 mt-3 mb-3 ml-20">
+                    <p class="text-white p-2 font-bold text-center">
+                        0.5%
+                        Headquaters
+                    </p>
+                    <div id="headqrts" class="text-green-500 text-xl text-center font-bold">0</div>
+
+                </div>
+                <div class="zone rounded-2xl sm:w-1/4 w-1/4 mt-3 mb-3 ml-20">
+                    <p class="text-white p-2 font-bold text-center" id="zoneP">
+                        0.2%
+                        Zone
+                    </p>
+                    <div id="zone" class="text-green-500 text-xl text-center font-bold">0</div>
+
+                </div>
+                <div class="chapter rounded-2xl sm:w-1/  w-1/4 mt-3 mb-3 ml-20">
+                    <p class="text-white p-2 font-bold text-center">
+                        0.1%
+                        Chapter
+                    </p>
+                    <div id="chapter" class="text-green-500 text-xl text-center font-bold">0</div>
+
+                </div>
+                <div class="unit rounded-2xl sm:w-1/4 w-1/4 mt-3 mb-3 ml-20">
+                    <p class="text-white p-2 font-bold text-center">
+                        0.2%
+                        Unit
+                    </p>
+                    <div id="unit" class="text-green-500 text-xl text-center font-bold">0</div>
+
+                </div>
+                <div class="unit_bf rounded-2xl sm:w-1/4 w-1/4 mt-3 mb-3 ml-20">
+                    <p class="text-white p-2 font-bold text-center">
+                        Unit B/F
+                        
+                    </p >
+                    <div id="unitExp" class="text-green-500 text-xl text-center font-bold"></div>
+
+                </div>
+                <!--- <h2>Month End Sharing</h2>
+                <p id="headqrts">0.5% to HeadQuaters = </p>
+                <p id="zone">0.2% to Zone = </p>
+                <p id="chapter">0.1% to Chapter = </p>
+                <p id="unit">0.2% to Unit = </p>
+                <p> Unit Income Carried Forward = <span id="unitExp"></span></p>  -->
+             
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
