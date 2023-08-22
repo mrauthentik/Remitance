@@ -71,10 +71,12 @@
     background-position: fixed;
 }
 select{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgba(0, 0, 0, 0.699); */
     color: black;
-}select:hover{
-    background-color: skyblue;
+    padding: 0 2px !important; 
+}
+select::selection{
+    font-size: 10px;
 }
 hr{
   border-bottom:dotted 5px ;
